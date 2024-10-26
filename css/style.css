@@ -1,0 +1,358 @@
+/* Raleway font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+:root{
+    --primary-color: #fff;
+    --accent-color: #DDA39B;
+    --text-color: #333;
+    --sub-text-color: rgb(18 18 18 / 75%);
+}
+
+
+
+header {
+    padding: 15px 0;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.main-logo {
+    width: 149px;
+}
+ul.menu-items-container {
+    margin-bottom: 0;
+    padding-left: 0;
+    gap: 20px;
+}
+ul.menu-items-container > li> a {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--sub-text-color);
+    transition: .6s;
+}
+
+nav > ul.menu-items-container > li:last-child > a {
+    color: #bf8c88;
+}
+
+ul.menu-items-container > li> a:hover {
+    transition: .6s;
+    text-decoration: underline;
+}
+
+.header-right > ul > li> form {
+    height: 45px;
+    position: relative;
+    width: 300px;
+}
+.header-right > ul > li> form + button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+.header-right > ul > li> form > input {
+    font-size: 14px;
+    height: 100%;
+    padding: 0px 20px;
+    text-transform: capitalize;
+    color: var(--text-color);
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ededed;
+    width: 100%;
+    padding-right: 35px;
+}
+.header-right > ul > li> form > button {
+    position: absolute;
+    right: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: var(--text-color);
+    top: 50%;
+    transform: translate(-10px, -50%);
+}
+
+.header-right > ul > li> a {
+    font-size: 20px;
+    color: var(--sub-text-color);
+}
+.mega-menu {
+    width: 100%;
+    position: absolute;
+    background: var(--primary-color);
+    bottom: 0;
+    transform: scaley(0) translate(0px, 100%);
+    transform-origin: bottom;
+    transition: .6s;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+}
+
+.mega-menu ul> li > a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--sub-text-color);
+    transition: .6s;
+    display: inline-block;
+}
+
+.mega-menu ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mega-menu {
+    padding: 30px 50px;
+    border-top: 1px solid #ededed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+}
+
+.mega-menu ul> li > a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+    transition: .6s;
+}
+
+.mega-menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.mega-menu-container .single_column > a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: .6s;
+    color: var(--sub-text-color);
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.mega-menu-container .single_column > a:hover {
+    transition: .6s;
+    font-weight: 600;
+    text-decoration: underline;
+}
+/*Mega menu open class*/
+.mega-menu--open {
+    visibility: visible;
+    opacity: 1;
+    transform: scaley(1) translate(0px, 100%);
+    transition: .6s;
+}
+
+/*Sidebar Style Start*/
+button.sidebar-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: #ededed;
+    transition: .6s;
+    
+}
+
+button.sidebar-button:hover {
+    background: var(--accent-color);
+    transition: .6s;
+    color: var(--primary-color);
+}
+.sidebar {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.sidebar-wrapper .sidebar-bottom {
+    bottom: 0;
+    position: absolute;
+    padding: 20px;
+    background: #ededed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    background: var(--primary-color);
+    position: relative;
+    z-index: 99;
+    transform: translate(-40%, 0px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sidebar-header > button {
+    width: 45px;
+    height: 45px;
+    background: #ededed;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: .6s;
+}
+
+.sidebar-header > button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transition: .6s;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid #ededed;
+    padding: 20px;
+}
+
+.sidebar-body > ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-body > ul > li> a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--sub-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: .6s;
+}
+
+.sidebar-body > ul > li> a:hover {
+    background: #ededed;
+    transition: .6s;
+    
+}
+
+.sidebar-body {
+    padding: 5px 0;
+}
+.sidebar-background {
+    width: 100%;
+    background: #00000061;
+    height: 100%;
+    position: absolute;
+}
+
+.currancy > .current-currancy {
+    font-size: 14px;
+    font-weight: 400;
+    transition: .6s;
+    cursor: pointer;
+}
+
+
+.currancy > .current-currancy:hover {
+    transition: .6s;
+    text-decoration: underline;
+}
+
+.currancy > ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    background: var(--primary-color);
+    width: 204px;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    top: 0;
+    transform: translate(0px, -120%);
+    border: 1px solid #ededed;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top;
+}
+.currancy-dropdown--open{
+    transform: translate(0px, -100%) !important;
+    transition: .6;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.currancy > ul > li {
+    padding: 5px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.currancy > ul > li:hover{
+    text-decoration: underline;
+    transition: .6s;
+}
+.currancy {
+    position: relative;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links > a {
+    font-size: 18px;
+    color: var(--text-color);
+    transition: .6s;
+}
+
+.social-links > a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+
+.sidebar--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-wrapper--open {
+    transform: translate(0%, 0px);
+    visibility: visible;
+    opacity: 1;
+    transition: .6s;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px){
+    .header-right > ul > li> form{
+        width: 190px;
+    }
+}
