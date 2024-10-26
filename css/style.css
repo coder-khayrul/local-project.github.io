@@ -13,7 +13,10 @@
     --sub-text-color: rgb(18 18 18 / 75%);
 }
 
-
+.custom-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
 header {
     padding: 15px 0;
@@ -22,12 +25,13 @@ header {
 }
 
 .main-logo {
-    width: 149px;
+   max-width: 150px;
 }
 ul.menu-items-container {
     margin-bottom: 0;
     padding-left: 0;
     gap: 20px;
+    flex-wrap: wrap;
 }
 ul.menu-items-container > li> a {
     text-transform: uppercase;
@@ -46,11 +50,14 @@ ul.menu-items-container > li> a:hover {
     transition: .6s;
     text-decoration: underline;
 }
-
+.header-item-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
 .header-right > ul > li> form {
-    height: 45px;
+    height: 40px;
     position: relative;
-    width: 300px;
+    width: 205px;
 }
 .header-right > ul > li> form + button {
     background: transparent;
@@ -64,9 +71,9 @@ ul.menu-items-container > li> a:hover {
     padding: 0px 20px;
     text-transform: capitalize;
     color: var(--text-color);
-    border-radius: 5px;
+    border-radius: 11px;
     outline: none;
-    border: 1px solid #ededed;
+    border: 1px solid var(--text-color);
     width: 100%;
     padding-right: 35px;
 }
@@ -349,10 +356,22 @@ button.sidebar-button:hover {
 
 
 
+@media only screen and (max-width: 1600px){
+ .custom-container{
+    max-width: 95%;
+ }   
+}
 
 
 @media only screen and (max-width: 991px){
     .header-right > ul > li> form{
-        width: 190px;
+        width: 164px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .header-item-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 150px 1fr;
     }
 }
