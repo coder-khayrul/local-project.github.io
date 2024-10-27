@@ -565,7 +565,9 @@ button.sidebar-button:hover {
     border-width: 2px;
     transition: .6s;
 }
-
+section.product-slider .custom-container {
+    padding: 0px 135px;
+}
 
 
 /*** Product grid style***/
@@ -609,8 +611,13 @@ section.product-grid .view-all--btn>a:hover {
     .custom-container {
         max-width: 95%;
     }
+  
 }
-
+@media only screen and (max-width: 1600px) {
+    section.product-slider .custom-container {
+        padding: 0px 0px;
+    }
+}
 @media only screen and (max-width: 1100px) {
     .single-product .product-img {
         height: 250px;
