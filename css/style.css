@@ -389,7 +389,7 @@ button.sidebar-button:hover {
 
 .single-product .product-img {
     position: relative;
-    height: 310px;
+    height: 370px;
     padding: 20px;
     background: var(--primary-color);
 }
@@ -406,7 +406,7 @@ button.sidebar-button:hover {
 .single-product .product-img .back-img {
     position: absolute;
     width: 100%;
-    height: 310px;
+    height: 370px;
     inset: 0;
     transition: .6s;
     visibility: hidden;
@@ -574,7 +574,7 @@ section.product-slider .custom-container {
 .product-grid-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .single-grid-items.single-product .product-img img {
@@ -582,7 +582,7 @@ section.product-slider .custom-container {
 }
 
 .single-grid-items.single-product .product-img {
-    height: auto;
+    height: 475px;
     padding: 0;
 }
 .single-grid-items.single-product .product-img .back-img{
@@ -613,9 +613,15 @@ section.product-grid .view-all--btn>a:hover {
     }
   
 }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
     section.product-slider .custom-container {
         padding: 0px 0px;
+    }
+    .single-grid-items.single-product .product-img {
+        height: 400px;
+    }
+    .single-grid-items.single-product .product-img .back-img {
+        height: 400px;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -626,14 +632,13 @@ section.product-grid .view-all--btn>a:hover {
     .single-product .product-img .back-img {
         height: 250px;
     }
-
-    /* .single-grid-items.single-product .product-img {
+    .single-grid-items.single-product .product-img {
         height: 310px;
-    } */
-
-    /* .single-grid-items.single-product .product-img .back-img {
+    }
+    .single-grid-items.single-product .product-img .back-img {
         height: 310px;
-    } */
+    }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -661,6 +666,9 @@ section.product-grid .view-all--btn>a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .section-title>h2 {
+        font-size: 30px;
+    }
     .product-details>a {
         font-size: 15px;
         text-wrap: nowrap;

@@ -2,7 +2,7 @@ const megaMenuButton = document.querySelector(".mega-menu--btn");
 const megaMenuArea = document.querySelector(".mega-menu");
 
 const handleMegaMenuToggle = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     megaMenuArea.classList.toggle("mega-menu--open");
 };
 
@@ -35,12 +35,12 @@ currancyItems.forEach(item => {
 })
 
 const handleDropDownToggle = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     currancyDropDownArea.classList.toggle("currancy-dropdown--open");
 };
 
 const handleDropDownExit = (e) => {
-    
+
     if (!currancyDropDownArea.contains(e.target) && !currancyDropDownButton.contains(e.target)) {
         currancyDropDownArea.classList.remove("currancy-dropdown--open");
     }
@@ -59,7 +59,7 @@ const sideBarArea = document.querySelector(".sidebar");
 const sideBarWarpper = document.querySelector(".sidebar-wrapper")
 
 const handleSideBarToggle = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     sideBarArea.classList.toggle("sidebar--open");
     sideBarWarpper.classList.toggle("sidebar-wrapper--open");
 };
@@ -69,7 +69,7 @@ const handleSideBarExit = (e) => {
     if (sideBarArea.classList.contains("sidebar--open") && !sideBarWarpper.contains(e.target)) {
 
         sideBarArea.classList.remove("sidebar--open");
-    sideBarWarpper.classList.remove("sidebar-wrapper--open");
+        sideBarWarpper.classList.remove("sidebar-wrapper--open");
 
     }
 };
@@ -86,24 +86,24 @@ document.addEventListener("click", handleSideBarExit);
 
 
 var swiper = new Swiper(".productSlider", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 15,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-    breakpoints: {
-        567: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-      600: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-      },
-      991: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      }
     },
-  });
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        600: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        991: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        }
+    },
+});
