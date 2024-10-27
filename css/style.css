@@ -571,7 +571,7 @@ button.sidebar-button:hover {
 /*** Product grid style***/
 .product-grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -580,9 +580,12 @@ button.sidebar-button:hover {
 }
 
 .single-grid-items.single-product .product-img {
+    height: auto;
     padding: 0;
 }
-
+.single-grid-items.single-product .product-img .back-img{
+    height: 100%;
+}
 section.product-grid .view-all--btn>a {
     background: var(--text-color);
     color: var(--primary-color);
@@ -617,16 +620,20 @@ section.product-grid .view-all--btn>a:hover {
         height: 250px;
     }
 
-    .single-grid-items.single-product .product-img {
+    /* .single-grid-items.single-product .product-img {
         height: 310px;
-    }
+    } */
 
-    .single-grid-items.single-product .product-img .back-img {
+    /* .single-grid-items.single-product .product-img .back-img {
         height: 310px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 991px) {
+    .product-grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
     .header-right>ul>li>form {
         width: 164px;
     }
@@ -643,14 +650,7 @@ section.product-grid .view-all--btn>a:hover {
     .single-product .product-img .back-img {
         height: 200px;
     }
-    
-    .single-grid-items.single-product .product-img {
-        height: 300px;
-    }
 
-    .single-grid-items.single-product .product-img .back-img {
-        height: 300px;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -665,16 +665,15 @@ section.product-grid .view-all--btn>a:hover {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
         
-    .single-grid-items.single-product .product-img {
-        height: 250px;
-    }
-
-    .single-grid-items.single-product .product-img .back-img {
-        height: 250px;
-    }
 }
 
 @media only screen and (max-width: 500px) {
+    .single-grid-items.single-product .product-img {
+        height: 400px;
+    }
+    .single-grid-items.single-product .product-img .back-img {
+        height: 400px;
+    } 
     .header-item-wrapper {
         display: grid;
         grid-template-columns: 1fr 150px 1fr;
