@@ -438,13 +438,42 @@ button.sidebar-button:hover {
     flex-direction: column;
     padding: 10px 15px;
     background: #F6F6F6;
-    transition: .6s;
+    transition: .3s;
     position: relative;
-    height: 100px;
 }
 
 .product-details.expanded {
     height: 150px;
+}
+/* Default product image height */
+.product-img {
+    height: 370px; /* Initial height */
+    transition: height 0.3s ease;
+}
+
+/* Expanded height when other products' images expand */
+.expand-image {
+    height: 420px !important; /* Increased height */
+}
+
+/* Product details section */
+.product-details {
+    padding-bottom: 15px; /* Default padding */
+    transition: padding 0.3s ease;
+}
+
+/* Show button only on hovered product */
+.product-tags {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.expand-details .product-tags {
+    visibility: visible;
+    opacity: 1;
 }
 
 .product-ratings>span {
@@ -506,10 +535,13 @@ button.sidebar-button:hover {
     visibility: visible;
     opacity: 1;
 }
-
 .product-details:hover {
-    padding-bottom: 45px;
-    transition: .6s;
+    padding-bottom: 60px;
+    transition: .3s;
+}
+.product-slider .product-details:hover {
+    padding-bottom: 65px;
+    transition: .3s;
 }
 
 .swiper-button-next::after,
@@ -646,6 +678,9 @@ section.product-grid .view-all--btn>a:hover {
 }
 
 @media only screen and (max-width: 1100px) {
+    .expand-image {
+        height: 300px !important; /* Increased height */
+    }
     .single-product .product-img {
         height: 250px;
     }
@@ -677,7 +712,9 @@ section.product-grid .view-all--btn>a:hover {
     .product-slider--wrapper {
         margin-inline: 20px;
     }
-
+    .expand-image {
+        height: 250px !important; /* Increased height */
+    }
     .single-product .product-img {
 
         height: 200px;
