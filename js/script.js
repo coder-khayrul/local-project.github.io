@@ -1,3 +1,6 @@
+
+//********Script for Mega Menu Handling */
+
 const megaMenuButton = document.querySelector(".mega-menu--btn");
 const megaMenuArea = document.querySelector(".mega-menu");
 
@@ -14,15 +17,12 @@ const handleMegaMenuExit = (e) => {
 };
 
 megaMenuButton.addEventListener("click", handleMegaMenuToggle);
-
 document.addEventListener("click", handleMegaMenuExit);
 
 
 
-
-
-
 //***Currancy Dropdown Control */
+
 const currancyDropDownButton = document.querySelector(".current-currancy")
 const currancyDropDownArea = document.querySelector(".currancy-dropdown")
 const currancyItems = document.querySelectorAll(".currancy-dropdown li")
@@ -47,8 +47,9 @@ const handleDropDownExit = (e) => {
 };
 
 currancyDropDownButton.addEventListener("click", handleDropDownToggle);
-
 document.addEventListener("click", handleDropDownExit);
+
+
 
 
 //**********Side Cart Handler */
@@ -70,7 +71,6 @@ const handleSideBarExit = (e) => {
 
         sideBarArea.classList.remove("sidebar--open");
         sideBarWarpper.classList.remove("sidebar-wrapper--open");
-
     }
 };
 
@@ -79,11 +79,41 @@ sideBarCloseButton.addEventListener("click", () => {
     sideBarArea.classList.remove("sidebar--open");
     sideBarWarpper.classList.remove("sidebar-wrapper--open");
 })
+
 document.addEventListener("click", handleSideBarExit);
 
 
 
+//*****Script for handling hover effect on product */
 
+document.querySelectorAll('.single-product').forEach((product) => {
+    product.addEventListener('mouseenter', () => {
+        
+        document.querySelectorAll('.product-details').forEach(details => {
+            details.classList.add('expanded');
+        });
+
+        const button = product.querySelector('.product-tags');
+        button.style.visibility = 'visible';
+        button.style.opacity = '1';
+    });
+
+    product.addEventListener('mouseleave', () => {
+        
+        document.querySelectorAll('.product-details').forEach(details => {
+            details.classList.remove('expanded');
+        });
+
+        const button = product.querySelector('.product-tags');
+        button.style.visibility = 'hidden';
+        button.style.opacity = '0';
+    });
+});
+
+
+
+
+//******Swiper Js for Product slider ***** */
 
 var swiper = new Swiper(".productSlider", {
     slidesPerView: 1,
