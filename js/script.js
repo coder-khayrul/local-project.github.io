@@ -80,3 +80,30 @@ sideBarCloseButton.addEventListener("click", () => {
     sideBarWarpper.classList.remove("sidebar-wrapper--open");
 })
 document.addEventListener("click", handleSideBarExit);
+
+
+
+
+
+var swiper = new Swiper(".productSlider", {
+    slidesPerView: 2,
+    spaceBetween: 15,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    breakpoints: {
+        567: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      }
+    },
+  });
