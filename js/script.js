@@ -109,6 +109,30 @@ document.querySelectorAll('.product-slider .single-product').forEach((product) =
 });
 
 
+//*****Script for handling hover effect on product */
+document.querySelectorAll('.product-grid .single-product').forEach((product) => {
+    product.querySelectorAll(".product-details").forEach((details => {
+        details.addEventListener('mouseenter', () => {
+
+            document.querySelectorAll('.single-product').forEach(otherProduct => {
+                if (otherProduct !== product) {
+                    otherProduct.querySelector('.product-img').classList.add('expand-grid-image');
+                }
+            });
+        });
+
+
+
+        details.addEventListener('mouseleave', () => {
+            
+            document.querySelectorAll('.product-img').forEach(img => {
+                img.classList.remove('expand-grid-image');
+            });
+
+        });
+    }))
+});
+
 
 
 

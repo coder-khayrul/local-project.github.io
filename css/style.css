@@ -455,7 +455,9 @@ button.sidebar-button:hover {
 .expand-image {
     height: 420px !important; /* Increased height */
 }
-
+.expand-grid-image {
+    height: 515px !important; /* Increased height */
+}
 /* Product details section */
 .product-details {
     padding-bottom: 15px; /* Default padding */
